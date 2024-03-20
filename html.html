@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+<style>
+/* Tambahkan gaya untuk memusatkan dan menampilkan tanggal dan jam */
+#hasil {
+  font-family: 'Arial', sans-serif;
+  font-size: 24px;
+  text-align: center; /* Memusatkan teks */
+}
+</style>
+<link rel="stylesheet" href="css.css">
+</head>
+<body>
+<div class="Notes">
+    <p class="image-center">Pemberitahuan</p>
+    <div class="image-center">
+        <img src="0e11db44fb0417c8e1ad3cf49b50b16f.jpg" alt="Deskripsi gambar" width="50%"
+             style="border-radius: 25px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">
+    </div>
+    <div id="datetime" class="image-center">Konten Awal</div>
+    <br>
+    <div class="image-center">Berbagi ilmu Online</div>
+    <div class="image-center">Bergabung Kegrub</div>
+    <div class="image-center">
+        <button style="cursor: pointer;" onclick="show()">Tekan Disini</button>
+    </div>
+</div>
+<script>
+    function show() {
+        var grupWhatsAppLink = "https://chat.whatsapp.com/Ja3uIfQhTXWGal9oYYplYs"; 
+        window.open(grupWhatsAppLink, "_blank");
+    }
+    function updateDateTime() {
+            // Pilih elemen dengan id 'datetime'
+            var elemenDatetime = document.getElementById('datetime');
+            if (elemenDatetime) {
+                // Perbarui innerHTML dari elemen
+                elemenDatetime.innerHTML = new Date().toLocaleString();
+            } else {
+                console.error("Elemen dengan id 'datetime' tidak ditemukan.");
+            }
+        }
+        
+        // Panggil fungsi updateDateTime setiap detik menggunakan setInterval
+        setInterval(updateDateTime, 1000);
+    
+
+    setInterval(updateDateTime, 1000); // Update tanggal dan jam setiap detik
+    updateDateTime(); // Panggil fungsi untuk menampilkan tanggal dan jam saat ini
+</script>
+<script src="java tanggal.js"></script>
+</body>
+</html>
